@@ -1,0 +1,25 @@
+import random
+
+def HigherLower(a,m):
+    b= random.randint(1,13)
+    print (a,'higher(H) or lower(L)')
+    var=input( )
+    if b<a:
+        if var=='L':
+            print(b)
+            return(HigherLower(b,m+1))
+        elif var=='H':
+            print(b)
+            print('Lose',m)
+            return(m)
+    elif a<b:
+        if var=='H':
+            print(b)
+            return(HigherLower(b,m+1))
+        elif var=='L':
+            print(b)
+            print('Lose',m)
+            return(m)
+    else:
+        print(b)
+        return(HigherLower(b,m+1))
