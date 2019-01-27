@@ -1,0 +1,37 @@
+import random
+
+def RPS(m):
+    print('choose rock(R) paper(P) scissors(S)')
+    a=input()
+    L=['R','P','C']
+    b=random.choice(L)
+    if a=='R':
+        if b=='P':
+            print(a,b,' Lose!',m)
+            return(m)
+        elif b=='S':
+            print(a,b,' WIN!')
+            return(RPS(m+1))
+        else:
+            print(a,b,' Draw')
+            return(RPS(m))
+    elif a=='P':
+        if b=='S':
+            print(a,b,' Lose!',m)
+            return(m)
+        elif b=='R':
+            print(a,b,' WIN!')
+            return(RPS(m+1))
+        else:
+            print(a,b,' Draw')
+            return(RPS(m))
+    elif a=='S':
+        if b=='R':
+            print(a,b,' Lose!',m)
+            return(m)
+        elif b=='P':
+            print(a,b,' WIN!')
+            return(RPS(m+1))
+        else:
+            print(a,b,' Draw')
+            return(RPS(m))
